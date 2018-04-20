@@ -13,11 +13,14 @@ function eventId = eventClassifier(acc, acc_fs, baro, baro_fs, temp1, temp1_fs, 
 
 %% write your code here
 AccCell = LoadAcc(acc);
+
+
+
 %% return estimated event id
 eventId = 999;
+
 end
 
-%% acc
 function AccCell =  LoadAcc(acc)
 % Acc features :
 acc_x = acc(:,2);
@@ -25,6 +28,7 @@ acc_y = acc(:,3);
 acc_z = acc(:,4);
 Acc_Mag = sqrt(acc_x.^2 + acc_y.^2 + acc_z.^2);
 % acc_mag_features :
-AccCell =  extraction_methods(Acc_Mag);
+features =  extraction_methods(Acc_Mag);
+
 end
-%%
+

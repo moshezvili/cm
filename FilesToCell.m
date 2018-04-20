@@ -5,6 +5,7 @@ function [Cells] = FilesToCell
     for k = 1:length(myFiles)
       baseFileName = myFiles(k).name;
       NameArguments = strsplit(baseFileName, '_');
+      
       Cells{k,1} = NameArguments{2};
       Cells{k,2} = NameArguments{end};
       fullFileName = fullfile(myFiles(k).folder, baseFileName);
