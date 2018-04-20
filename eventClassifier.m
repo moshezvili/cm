@@ -12,11 +12,6 @@ function eventId = eventClassifier(acc, acc_fs, baro, baro_fs, temp1, temp1_fs, 
 %                  9 - passanger in a vehicle, 10 - walking with sensor hanging]
 
 %% write your code here
-features = {@maxFFT,@zero_crossing_rate,@waveform_length,@root_mean_square,@mean_power_f,@vector_mean,@energy_consumption,@hamming_window};
-for i = 1:length(features)
-    features{i}(1:1:100)
-end
-% M = containers.Map(features,valueSet) %make map from keys to values
 
 
 
