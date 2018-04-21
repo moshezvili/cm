@@ -1,4 +1,5 @@
-function [acc, acc_fs, baro, baro_fs, temp1, temp1_fs, temp2, temp2_fs] = CellToInput(CellArray)
+function [acc, acc_fs, baro, baro_fs, temp1, temp1_fs, temp2, temp2_fs] = CellToInput()
+CellArray = FilesToCell();
 for k = 1:length(CellArray)
     a=CellArray{k,2};
     switch a{1,1}
